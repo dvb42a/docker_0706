@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu {
+    @apply w-[240px] h-screen fixed top-0 left-0 flex grow flex-col gap-y-4 overflow-y-auto border-gray-200 pt-20 px-2 bg-slate-800 text-white font-medium z-10 shadow;
+}
+
+.menu-list {
+    @apply flex flex-1 flex-col gap-y-2;
+}
+
+.menu-title {
+    @apply flex items-center overflow-auto w-full gap-x-3 rounded p-2 leading-6 hover:bg-gray-50 hover:text-lightPrimary cursor-pointer;
+}
+
+.menu-title i {
+    @apply pointer-events-none duration-200 ease-in-out text-sm;
+}
+
+.menu-item {
+    @apply hover:bg-gray-50 block rounded py-2 pr-2 pl-8 leading-4 text-gray-300;
+}
+
+.sub-menu {
+    @apply mt-1 px-2 space-y-2;
+}
+
+.sub-menu li a {
+    @apply flex items-center gap-2;
+}
+
+.is-active {
+    @apply bg-gray-50 text-lightPrimary;
+}

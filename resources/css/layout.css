@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.page-head {
+    @apply mb-6 flex;
+}
+
+
+ /* 媒體庫 hover preview 預覽圖片 */
+.media-modal {
+    @apply absolute z-10 w-96 shadow-lg rounded-md overflow-hidden border-4 border-white bg-white;
+}
+
+
+
+
+
+/* 狀態顏色變化 ------------------- */
+
+/* 媒體資料夾狀態
+    is-puliched / is-suspended */
+
+/* 圖片上傳後確認狀態
+    is-checked, is-failed */
+
+.is-up,
+.is-checked,
+.is-success {
+    @apply text-green-600;
+}
+
+.is-down,
+.is-failed,
+.is-danger {
+    @apply text-danger;
+}
+
+/* check icon  */
+.check-icon {
+    @apply m-1;
+}
+
+
+/* ck-editer 設定 */
+.ck {
+    @apply h-[1000px];
+}
+
+.ck .ck-content {
+    @apply h-full;
+}
+
+
+/* 文章狀態 Tag */
+
+/* 未儲存 */
+.is-unsave {
+    @apply bg-gray-50 text-gray-600 ring-gray-500/10;
+}
+
+/* 草稿 */
+.is-draft {
+    @apply bg-blue-50 text-blue-700 ring-blue-700/10;
+}
+
+/* 已發布 */
+.is-published {
+    @apply bg-green-50 text-green-700 ring-green-600/20;
+}
+
+/* 已排程 */
+.is-schedule {
+    @apply bg-yellow-50 text-yellow-800 ring-yellow-600/20;
+}
+
+/* 已停用 */
+.is-suspended {
+    @apply bg-red-50 text-red-700 ring-red-600/10;
+}
+
+/* 關鍵字樣式 */
+.is-keyword {
+    @apply bg-purple-50 text-purple-700  ring-purple-700/10;
+}
+
+
+
+/* hide element ---------- */
+.hide {
+    @apply hidden;
+}

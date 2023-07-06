@@ -1,0 +1,53 @@
+
+<!-- back up html code -->
+<div class="home-section">
+    <section class="content-list">
+        <table>
+            <thead>
+                <div class="list-header">
+                    <div class="list-cat">
+                        <a herf="#">
+                            <span>
+                                標籤
+                            </span>
+                            <i class='bx bx-chevron-down'></i>
+                        </a>
+                    </div>
+                </div>
+            </thead>
+            <!-- list header ends--------------------->
+            <!-- lists starts--------------------- -->
+            <!-- list-element starts----------------->
+
+            <form method="POST" action="{{route('chapter.store')}}" enctype="multipart/form-data">
+                @csrf
+                <input name="bp_chapter_name">
+                <button type="submit">新增</button>
+            </form>
+            <tbody>
+            <form method="POST" action="{{route('chapter.hashtagCreate')}}" enctype="multipart/form-data" >
+                @csrf
+                @foreach($chapters as  $chapter)
+                    <tr>
+                        <td>[{{$chapter->bp_chapter_name}}] </td>
+                        @foreach($content_tags as  $content_tag)
+                            @if($chapter->bp_chapter_id == $content_tag->bp_chapter_id)
+                                <td>{{$content_tag->Tag->bp_hashtag}}
+                                    <button name="delete_function"value="{{$content_tag->bp_tag_id}}">delelte</button>
+                                </td>
+                            @endif
+                        @endforeach
+                        <td>
+                            <input name="bp_tag_name[]">
+                            <button name="submit_chapter" value="{{$chapter->bp_chapter_id}}">儲存</button>
+                        </td>
+                    </tr>
+                @endforeach
+            <form>
+            </tbody>
+        </table>
+        @livewireStyles
+        @livewire('test-table')
+
+    </section>
+</div>

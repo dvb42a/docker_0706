@@ -1,0 +1,25 @@
+/* 引入 tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.breadcrumb {
+    @apply text-darkText text-sm bg-gray-100 px-3 py-2 relative top-[68px] w-full ;
+}
+
+.breadcrumb ul {
+    @apply flex gap-4;
+}
+
+.breadcrumb li {
+    @apply flex items-center gap-4 bg-transparent;
+}
+
+.breadcrumb a {
+    @apply flex items-center gap-1 leading-4 hover:font-semibold ease-in-out;
+}
+
+.breadcrumb .is-active {
+    @apply text-primary pointer-events-none;
+}

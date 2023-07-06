@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.side-group {
+    @apply w-[220px] p-4 space-y-3 relative overflow-auto;
+    height: calc(100vh - 104px);
+}
+
+.chapter-keyword {
+    @apply font-bold flex items-center whitespace-nowrap truncate;
+}
+
+.content-num {
+    @apply text-slate-400 text-xs ml-2 whitespace-nowrap;
+}
+
+.chapter-active {
+    @apply text-lightPrimary bg-transparent font-bold;
+}

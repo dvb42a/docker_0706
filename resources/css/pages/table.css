@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table {
+    @apply min-w-[10rem] table-fixed divide-y divide-gray-300 border-collapse;
+}
+
+.th-check {
+    @apply relative sm:w-12 sm:px-6;
+}
+
+.th-first {
+    @apply w-24 py-3 pr-3 text-left font-semibold text-gray-800;
+}
+
+th {
+    @apply text-left font-semibold text-gray-800 whitespace-nowrap;
+}
+
+.th-last {
+    @apply relative;
+}
+
+.td-first {
+    @apply whitespace-nowrap font-medium text-gray-800;
+}
+
+td {
+    @apply whitespace-nowrap;
+}
+
+.td-last {
+    @apply whitespace-nowrap text-right font-medium sm:pr-3;
+}
+
+tr {
+    @apply h-12 text-gray-800 hover:bg-gray-100;
+}

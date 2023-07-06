@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.tab {
+    @apply border-transparent text-darkText text-lg mb-2 py-2 px-2 text-center font-medium;
+}
+
+.is-selected {
+    @apply  text-indigo-600 py-2 px-2 text-center font-medium;
+}
+
+.tab-container {
+    @apply space-y-4 py-4;
+}
+
+.tab-element {
+    @apply flex justify-between;
+}
+
+.tab-btns {
+    @apply flex gap-2;
+}
+
+.tabAll {
+    @apply flex flex-col min-w-[240px];
+}
+
+.chapter-title {
+    @apply flex justify-between items-center mb-2 border-b border-gray-200;
+}
